@@ -34,14 +34,14 @@ export async function testDecryptWithPassphraseWithoutContext(key) {
         const component = <View key={ key }>
             <Text style={ styles.title }>secureCellSealWithPassphraseDecrypt64</Text>
             <Text style={ styles.text }>Wait exception because context is empty</Text>
-            <Text style={ styles.rejected }>Test passed with result: { decrypted }</Text>
+            <Text style={ styles.rejected }>Test failed with result: { decrypted }</Text>
         </View>;
         return Promise.reject(component);
     } catch (e) {
         const component = <View key={ key }>
             <Text style={ styles.title }>secureCellSealWithPassphraseDecrypt64</Text>
             <Text style={ styles.text }>Wait exception because context is empty</Text>
-            <Text style={ styles.resolved }>Test failed with error: { e.message }</Text>
+            <Text style={ styles.resolved }>Test passed with error: { e.message }</Text>
         </View>;
         return Promise.resolve(component);
     }
@@ -56,14 +56,14 @@ export async function testDecryptWithPassphraseWithWrongContext(key) {
         const component = <View key={ key }>
             <Text style={ styles.title }>secureCellSealWithPassphraseDecrypt64</Text>
             <Text style={ styles.text }>Wait exception because context is wrong</Text>
-            <Text style={ styles.rejected }>Test passed with result: { decrypted }</Text>
+            <Text style={ styles.rejected }>Test failed with result: { decrypted }</Text>
         </View>;
         return Promise.reject(component);
     } catch (e) {
         const component = <View key={ key }>
             <Text style={ styles.title }>secureCellSealWithPassphraseDecrypt64</Text>
             <Text style={ styles.text }>Wait exception because context is wrong</Text>
-            <Text style={ styles.resolved }>Test failed with error: { e.message }</Text>
+            <Text style={ styles.resolved }>Test passed with error: { e.message }</Text>
         </View>;
         return Promise.resolve(component);
     }
@@ -78,14 +78,14 @@ export async function testDecryptWithPassphraseWithWrongPassphrase(key) {
         const component = <View key={ key }>
             <Text style={ styles.title }>secureCellSealWithPassphraseDecrypt64</Text>
             <Text style={ styles.text }>Wait exception because passphrase is wrong</Text>
-            <Text style={ styles.rejected }>Test passed with result: { decrypted }</Text>
+            <Text style={ styles.rejected }>Test failed with result: { decrypted }</Text>
         </View>;
         return Promise.reject(component);
     } catch (e) {
         const component = <View key={ key }>
             <Text style={ styles.title }>secureCellSealWithPassphraseDecrypt64</Text>
             <Text style={ styles.text }>Wait exception because passphrase is wrong</Text>
-            <Text style={ styles.resolved }>Test failed with error: { e.message }</Text>
+            <Text style={ styles.resolved }>Test passed with error: { e.message }</Text>
         </View>;
         return Promise.resolve(component);
     }
@@ -100,14 +100,14 @@ export async function testDecryptWithPassphraseWithWrongMessage(key) {
         const component = <View key={ key }>
             <Text style={ styles.title }>secureCellSealWithPassphraseDecrypt64</Text>
             <Text style={ styles.text }>Wait exception because message is wrong</Text>
-            <Text style={ styles.rejected }>Test passed with result: { decrypted }</Text>
+            <Text style={ styles.rejected }>Test failed with result: { decrypted }</Text>
         </View>;
         return Promise.reject(component);
     } catch (e) {
         const component = <View key={ key }>
             <Text style={ styles.title }>secureCellSealWithPassphraseDecrypt64</Text>
             <Text style={ styles.text }>Wait exception because message is wrong</Text>
-            <Text style={ styles.resolved }>Test failed with error: { e.message }</Text>
+            <Text style={ styles.resolved }>Test passed with error: { e.message }</Text>
         </View>;
         return Promise.resolve(component);
     }
